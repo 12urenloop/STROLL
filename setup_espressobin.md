@@ -12,8 +12,13 @@ having the same MAC address.
 
 4. Update apt: `apt-get update && apt-get upgrade`
 
-5. Install requirements `apt-get install bluez git`
+5. Install requirements `apt-get install bluez git netcat-traditional`
 
 6. Clone this repo with git.
 
-7. Setup systemd to start this at boot
+7. Setup systemd to start the scanner service at boot: `cp STROLL/scanner.service /etc/systemd/system`
+ and enable it: `systemctl enable scanner`.
+
+ 8. Configure the IP address and port of CVC in `client.sh`
+
+ 9. TODO: bridge setup
