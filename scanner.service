@@ -5,7 +5,8 @@ After=network-online.target
 [Service]
 Type=simple
 WorkingDirectory=/root/STROLL
-ExecStart=/root/STROLL/client.sh
+EnvironmentFile=-/root/STROLL/environment
+ExecStart=/root/STROLL/client.sh ${CVC_SERVER} ${CVC_PORT}
 
 Restart=always
 RestartSec=3

@@ -1,7 +1,8 @@
 #!/bin/bash
 
-SERVER="10.0.0.133"
-PORT="2583"
+SERVER="$1"
+PORT="$2"
 
+echo "Server $1 on port $2"
 # Use traditional netcat, to close when stdin closes
 ./scan.sh | nc.traditional -q 1 "$SERVER" "$PORT"
