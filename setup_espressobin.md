@@ -25,7 +25,7 @@ saveenv
 ```
 Boot the Espressobin, change the root password and don't add a regular user.
 
-5. Update apt: `apt-get update && apt-get upgrade`
+5. Run `curl -sSL https://raw.githubusercontent.com/12urenloop/STROLL/master/deploy.sh | bash` or continue manually; Update apt: `apt-get update && apt-get upgrade`
 
 6. Install requirements `apt-get install bluez git netcat-traditional`
 
@@ -34,6 +34,6 @@ Boot the Espressobin, change the root password and don't add a regular user.
 8. Setup systemd to start the scanner service at boot: `cp STROLL/scanner.service /etc/systemd/system`
  and enable it: `systemctl enable scanner`.
 
-9. Configure the IP address and port of CVC in `client.sh`
+9. Configure the IP address and port of CVC in `environment`
 
 10. TODO: bridge setup
