@@ -20,3 +20,4 @@ iface wan inet manual
 auto br0
 iface br0 inet dhcp
         bridge_ports lan0 lan1 wan
+        up /sbin/brctl stp br0 on
