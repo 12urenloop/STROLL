@@ -1,3 +1,8 @@
+source /etc/network/interfaces.d/*
+# network is managed by network manager
+auto lo
+iface lo inet loopback
+
 # configure lan0 so it correctly sets up on boot
 auto lan0
 allow-hotplug lan0
