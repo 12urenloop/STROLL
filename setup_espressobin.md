@@ -1,5 +1,7 @@
 # Espressobin setup
 
+**Notice:** CVC protocol should be set to `raw` instead of `gyrid` (in `count-von-count\count-von-count.yaml`).
+
 1. Download the latest [uboot](https://dl.armbian.com/espressobin/u-boot/). 
 The correct binary match the RAM mem size, the amount of RAM chips onboard, the CPU and DDR speed.
 The RAM mem size, CPU and DDR speed can be seen in the splash screen on boot.
