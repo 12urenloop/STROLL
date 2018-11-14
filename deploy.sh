@@ -2,6 +2,7 @@
 systemctl stop systemd-networkd && systemctl disable systemd-networkd
 apt-get update -yyq && apt-get upgrade -yyq
 apt-get install -yyq git bluez netcat-traditional
+rm -rf /root/STROLL
 git clone https://github.com/12urenloop/STROLL.git /root/STROLL
 cp /root/STROLL/scanner.service /etc/systemd/system
 cp /root/STROLL/networking /etc/network/interfaces
