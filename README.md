@@ -8,3 +8,28 @@ to send data about nearby bluetooth devices (MAC address and RSSI) to
 
 
 This repo will also contain information about how to setup the Espressobins.
+
+Deploying to the Espressobins is easy-peasy just use `curl -sSL https://raw.githubusercontent.com/12urenloop/STROLL/master/deploy.sh | bash` and set the `count-von-count` server ip in the environment file of the `STROLL` directory.
+
+## Dependencies
+
+* git
+* bluez
+* netcat-traditional
+
+## Info about the data being send
+
+The data for `count-von-count` raw protocol is formatted as follow.
+
+```
+STATION_MAC,IGNORE,BATTON_MAC,RSSI
+```
+
+STROLL uses `client.sh` and `scan.sh` to get the data from bluez.
+It just parses the `INFO`/`DEBUG` messages that show up from `bluethootctl` when ran interactive.
+
+## Testing CVC
+
+`test.sh` can be piped into `test-client.sh` to test out count-von-count.
+For example calling `./testsh | ./test-client.sh 10.0.0.10 2583` starts sending test messages to the cvc server.
+The only adjustment that needs to happen is to set the stations and the used batton in `test.sh`.
