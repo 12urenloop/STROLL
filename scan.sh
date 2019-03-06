@@ -7,9 +7,14 @@ BT_STATION_MAC=$(bluetoothctl list | cut -d " " -f 2)
 # Check if bluetooth is plugged in
 [[ -z  "$BT_STATION_MAC" ]] && echo "MSG, no BT, MAC_ethernet=${ETH_MAC}" && sleep 1 && exit
 
-echo "INFO, station, MAC_bluetooth=${BT_STATION_MAC}, MAC_ethernet=${ETH_MAC}"
 coproc bluetoothctl
-echo 'scan on' >&"${COPROC[1]}"
+echo "Powering on bluetooth controller"
+echo "power on" >&${COPROC[1]}
+sleep 2
+echo 'Start scanning'
+echo "scan on" >&${COPROC[1]}
+
+echo "INFO, station, MAC_bluetooth=${BT_STATION_MAC}, MAC_ethernet=${ETH_MAC}"
 while read -u "${COPROC[0]}" DIRTY_LOGLINE
 do
     if [[ "${DIRTY_LOGLINE}" =~ "RSSI" ]]; then
