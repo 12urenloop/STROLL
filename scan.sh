@@ -2,7 +2,7 @@
 set -o errexit
 
 ETH_MAC=$(cat /sys/class/net/eth0/address)
-BT_STATION_MAC=$(hcitool dev | grep "hci0" | cut -f 3)
+BT_STATION_MAC=$(bluetoothctl list | cut -d " " -f 2)
 
 # Check if bluetooth is plugged in
 [[ -z  "$BT_STATION_MAC" ]] && echo "MSG, no BT, MAC_ethernet=${ETH_MAC}" && sleep 1 && exit
