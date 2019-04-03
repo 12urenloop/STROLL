@@ -3,7 +3,7 @@ echo "Clearing the old directory ..."
 rm -rf /root/STROLL
 #echo "Disabling systemd networkd ..."
 #systemctl stop systemd-networkd && systemctl disable systemd-networkd
-pacman -Sy openbsd-netcat bluez bluez-utils git
+pacman -S --noconfirm openbsd-netcat bluez bluez-utils git
 echo "Install STROLL ..."
 git clone https://github.com/12urenloop/STROLL.git /root/STROLL
 cp /root/STROLL/scanner.service /etc/systemd/system
