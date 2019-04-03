@@ -7,6 +7,7 @@ pacman -S --noconfirm openbsd-netcat bluez bluez-utils git
 echo "Install STROLL ..."
 git clone https://github.com/12urenloop/STROLL.git /root/STROLL
 cp /root/STROLL/scanner.service /etc/systemd/system
+rm -rf /etc/systemd/network/*
 cp /root/STROLL/networkd/* /etc/systemd/network/
 echo "Restarting network ..."
 systemctl restart systemd-networkd
