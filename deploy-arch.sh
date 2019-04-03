@@ -7,10 +7,9 @@ pacman -S openbsd-netcat bluez bluez-utils git
 echo "Install STROLL ..."
 git clone https://github.com/12urenloop/STROLL.git /root/STROLL
 cp /root/STROLL/scanner.service /etc/systemd/system
-#cp /root/STROLL/networking /etc/network/interfaces
+cp /root/STROLL/networkd/* /etc/systemd/network/
 echo "Restarting network ..."
-#service networking stop
-#service networking start
+systemctl restart systemd-networkd
 systemctl daemon-reload
 systemctl enable scanner && systemctl restart scanner
 systemctl stop haveged

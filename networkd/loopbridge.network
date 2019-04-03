@@ -1,0 +1,7 @@
+[Match]
+Name=loopbridge
+
+[Network]
+DHCP=yes
+IPForward=ipv4
+ConfigureWithoutCarrier=yes
