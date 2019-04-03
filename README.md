@@ -30,6 +30,6 @@ It just parses the `INFO`/`DEBUG` messages that show up from `bluethootctl` when
 
 ## Testing CVC
 
-`test.sh` can be piped into `test-client.sh` to test out count-von-count.
-For example calling `./testsh | ./test-client.sh 10.0.0.10 2583` starts sending test messages to the cvc server.
-The only adjustment that needs to happen is to set the stations and the used batton in `test.sh`.
+`test-client.sh` can be executed to test out count-von-count. For example, calling `./test-client.sh`
+start sending test messages to the cvc server. The test batton and station needs to be added to
+count-von-count config script.
