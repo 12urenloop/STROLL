@@ -30,5 +30,6 @@ bt-address:
 ## mr-white
 
 mac-address: f0:ad:4e:03:86:9a
-bt-address:  
+bt-address:  00:01:95:0D:CF:E4
 
+The USB3.0 port didn't seem to power the BT stick. The USB2.0 works just fine it seems.
