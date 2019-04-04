@@ -1,3 +1,4 @@
 [NetDev]
 Name=loopbridge
 Kind=bridge
+STP=true
