@@ -1,13 +1,14 @@
 [Unit]
-Requires=network-online.target
+Description=System Tracking Runners On Langdurige Loopwedstrijden
+Wants=network-online.target
 After=network-online.target
 
 [Service]
 Type=simple
-WorkingDirectory=/root/STROLL
-EnvironmentFile=-/root/STROLL/environment
-ExecStart=/root/STROLL/client.sh ${CVC_SERVER} ${CVC_PORT}
-
+WorkingDirectory=/home/stroll/STROLL
+EnvironmentFile=-/home/stroll/STROLL/environment
+ExecStart=/home/stroll/STROLL/client.sh ${CVC_SERVER} ${CVC_PORT}
+User=stroll
 Restart=always
 RestartSec=3
 
