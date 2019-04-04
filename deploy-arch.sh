@@ -13,6 +13,10 @@ chown -R stroll:stroll /home/stroll/STROLL
 cp /home/stroll/STROLL/scanner.service /etc/systemd/system
 rm -rf /etc/systemd/network/*
 cp /home/stroll/STROLL/networkd/* /etc/systemd/network/
+echo "Enable bluetooth and start ..."
+modprobe btusb
+systemctl enable bluetooth
+systemctl start bluetooth
 echo 'Reload systemd ...'
 systemctl daemon-reload
 echo "Restarting network ..."
