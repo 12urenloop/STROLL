@@ -9,7 +9,7 @@ to send data about nearby bluetooth devices (MAC address and RSSI) to
 
 This repo will also contain information about how to setup the Espressobins.
 
-Deploying to the Espressobins is easy-peasy just use `curl -sSL https://raw.githubusercontent.com/12urenloop/STROLL/master/deploy.sh | bash` and set the `count-von-count` server ip in the environment file of the `STROLL` directory.
+Deploying to the Espressobins is easy-peasy just use `curl -sSL https://raw.githubusercontent.com/12urenloop/STROLL/master/deploy-arch.sh | bash` and set the `count-von-count` server ip in the environment file of the `STROLL` directory.
 
 ## Dependencies
 
