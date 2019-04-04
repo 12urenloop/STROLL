@@ -8,7 +8,6 @@ Type=simple
 WorkingDirectory=/home/stroll/STROLL
 EnvironmentFile=-/home/stroll/STROLL/environment
 ExecStart=/home/stroll/STROLL/client.sh ${CVC_SERVER} ${CVC_PORT}
-User=stroll
 Restart=always
 RestartSec=3
 
