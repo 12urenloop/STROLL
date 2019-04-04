@@ -8,10 +8,10 @@ BT_STATION_MAC=$(bluetoothctl list | cut -d " " -f 2)
 [[ -z  "$BT_STATION_MAC" ]] && echo "MSG, no BT, MAC_ethernet=${ETH_MAC}" && sleep 1 && exit
 
 coproc bluetoothctl
-echo "Powering on bluetooth controller"
+#echo "Powering on bluetooth controller"
 echo "power on" >&${COPROC[1]}
 sleep 2
-echo 'Start scanning'
+#echo 'Start scanning'
 echo "scan on" >&${COPROC[1]}
 
 echo "INFO, station, MAC_bluetooth=${BT_STATION_MAC}, MAC_ethernet=${ETH_MAC}"
