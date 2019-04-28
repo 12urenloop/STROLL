@@ -3,7 +3,8 @@
 ## mr-blonde
 
 mac-address: f0:ad:4e:04:92:df  
-bt-address:  00:01:95:0d:cf:e1  
+bt-address:  00:01:95:0d:cf:e1
+loopbridge: 76:30:2b:12:5c:8c
 
 ## mr-orange
 
