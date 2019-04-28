@@ -20,7 +20,8 @@ loopbridge: 0e:b0:0d:7e:29:f7
 ## mr-brown
 
 mac-address: f0:ad:4e:04:93:c3  
-bt-address:  00:01:95:0d:d1:f0  
+bt-address:  00:01:95:0d:d1:f0
+loopbridge: da:8a:69:1f:22:63
 
 ## mr-pink
 
