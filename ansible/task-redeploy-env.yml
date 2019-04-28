@@ -1,0 +1,9 @@
+- hosts: all
+  become: true
+  tasks:
+    - name: Copy over the env file
+      copy:
+        src: ../environment
+        dest: /home/stroll/
+    - name: Restart the scanner service
+      systemd: 'name=scanner state=restarted'
