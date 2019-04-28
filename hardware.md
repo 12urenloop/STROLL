@@ -15,6 +15,7 @@ loopbridge: 2a:75:e2:bf:90:59
 
 mac-address: f0:ad:4e:03:86:78  
 bt-address:  00:01:95:0a:56:3b
+loopbridge: 0e:b0:0d:7e:29:f7
 
 ## mr-brown
 
