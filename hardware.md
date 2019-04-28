@@ -39,4 +39,8 @@ mac-address: f0:ad:4e:03:86:9a
 bt-address:  00:01:95:0d:cf:e4  
 loopbridge: ce:d7:4a:0f:94:c8  
 
+## nice-guy 
+mac-address: b8:27:eb:42:4e:b6
+bt-address: TODO
+
 The USB3.0 port didn't seem to power the BT stick. The USB2.0 works just fine it seems.
