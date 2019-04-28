@@ -22,6 +22,6 @@ do
         LOGLINE=$(echo "${DIRTY_LOGLINE}" | sed 's/\x1B\[[0-9;]*[JKmsu]//g; s/\r/\n/g' | tr -d '\n' | sed "s/^[ \t]*//" | tr -s ' ')
         BATON_MAC=$(echo "${LOGLINE}" | cut -d ' ' -f 4)
         RSSI=$(echo "${LOGLINE}" | cut -d ' ' -f 6)
-        echo "STROLL,${BT_STATION_MAC},IGNORE,${BATON_MAC},${RSSI}"
+        echo "${BT_STATION_MAC},IGNORE,${BATON_MAC},${RSSI}"
     fi
 done
