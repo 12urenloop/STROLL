@@ -1,7 +1,7 @@
 #!/bin/bash
 set -o errexit
 
-ETH_MAC=$(cat /sys/class/net/wlp58s0/address)
+ETH_MAC=$(cat /sys/class/net/eth0/address)
 BT_STATION_MAC=$(bluetoothctl list | cut -d " " -f 2)
 
 controller_count=$(echo "$BT_STATION_MAC"  | wc -l)

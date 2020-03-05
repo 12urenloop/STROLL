@@ -35,6 +35,8 @@ bt-address:
 
 ## mr-white
 
+! Partition is borked. Needs a new image flash
+
 mac-address: f0:ad:4e:03:86:9a  
 bt-address:  00:01:95:0d:cf:e4  
 loopbridge: ce:d7:4a:0f:94:c8  

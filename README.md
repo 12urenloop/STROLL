@@ -33,3 +33,10 @@ It just parses the `INFO`/`DEBUG` messages that show up from `bluethootctl` when
 `test-client.sh` can be executed to test out count-von-count. For example, calling `./test-client.sh`
 start sending test messages to the cvc server. The test batton and station needs to be added to
 count-von-count config script.
+
+## Some extra information
+
+You can access the bins over a usb cable with screen.
+Replace `/dev/ttyUSB0` with you device.
+
+    sudo screen /dev/ttyUSB0 115200
